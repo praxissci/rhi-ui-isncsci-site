@@ -1,0 +1,10 @@
+{
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/bundles/**"
+  ],
+  "npm": false,
+  "sources": [
+      "src/**/*.js",
+      "package.json"
+    ]
+}

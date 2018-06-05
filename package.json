@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "RHI Tech"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0"
+  },
+  "description": "Reusable user interface [web components](https://www.webcomponents.org/introduction) for the ISNCSCI project.",
+  "devDependencies": {},
+  "homepage": "http://www.rickhanseninstitute.org/",
+  "keywords": [
+    "custom component",
+    "web component",
+    "google",
+    "polymer",
+    "polymer 3"
+  ],
+  "license": "https://raw.githubusercontent.com/rick-hansen-institute/rhi-ui-isncsci/master/LICENSE.txt",
+  "main": "index.html",
+  "name": "rhi-ui-isncsci",
+  "optionalDependencies": {},
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rick-hansen-institute/rhi-ui-isncsci.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.0.1"
+}
