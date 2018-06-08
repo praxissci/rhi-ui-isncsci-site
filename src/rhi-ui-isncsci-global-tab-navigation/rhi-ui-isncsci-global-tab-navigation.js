@@ -55,8 +55,7 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
                 .navigation .sections .section a {
                     display: inline-block;
                     color: #666;
-                    font-size: 12px;
-                    font-weight: bold;
+                    font-size: 13px;
                     line-height: 40px;
                     padding: 0 16px;
                     text-decoration: none;
@@ -65,10 +64,6 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
 
                 .navigation .sections .section[selected] {
                     display: inline-block;
-                }
-
-                .navigation .sections .section[selected] a {
-                    color: #000;
                 }
 
                 .display-inline-block {
@@ -129,8 +124,14 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
 
                     .navigation .sections .section a {
                         border-bottom: solid 4px #FFF;
+                        font-size: 12px;
+                        font-weight: bold;
                         line-height: 40px;
                         transition: border-color 500ms;
+                    }
+
+                    .navigation .sections .section[selected] a {
+                        color: #000;
                     }
 
                     .navigation .sections .section[selected] a,
@@ -140,6 +141,10 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
 
                     .navigation .sections .section a:hover {
                         border-bottom: solid 4px #666;
+                    }
+
+                    .navigation .sections .section.home {
+                        display: none;
                     }
                 }
             </style>
@@ -156,6 +161,9 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
                         </a>
                     </div>
                     <div class="sections display-flex">
+                        <div class="section home" selected$="[[isHomeSelected]]">
+                            <a href="[[item.uri]]">[[homeLabel]]</a>
+                        </div>
                         <dom-repeat items="[[sections]]">
                             <template>
                                 <div class="section" selected$="[[item.isSelected]]">
@@ -180,6 +188,14 @@ export class RhiUiIsncsciGlobalTabNavigation extends PolymerElement {
 
     static get properties() {
         return {
+            isHomeSelected: {
+                type: Boolean,
+                value: false
+            },
+            homeLabel: {
+                type: String,
+                value: ''
+            },
             homeUri: {
                 type: String,
                 value: '/'
